@@ -1,18 +1,3 @@
-# Tytuł
-## Poziom2
-###### Poziom 6
-
-Lista zadań do wykonania
-* todo 1
-* todo2
-  * ok
- 
-1. Rozdział 1
-2. Rozdział 2
-
-**Listing 1**
-_listing 2_
-
 ### Zadanie 1
 ```sql
 Select * FROM osoba;
@@ -38,5 +23,25 @@ ALTER TABLE izba ADD kolor_izby enum("czarny", "czerwony") AFTER metraz;
 ALTER TABLE izba ALTER kolor_izby SET DEFAULT "czarny";
 INSERT INTO izba values("Nordycka 1", "Spizarnia", "80", default, 1);
 ```
+```sql
+CREATE TABLE przetwory (id_przetworu INT AUTO_INCREMENT, rok_produkcji VARCHAR(4) DEFAULT '1654', id_wykonawcy INT, zawartosc VARCHAR(30), dodatek VARCHAR(30) DEFAULT 'papryczka chilli', id_konsumenta INT, PRIMARY KEY(id_przetworu), FOREIGN KEY(id_wykonawcy) REFERENCES postac(id_postaci), FOREIGN KEY(id_konsumenta) REFERENCES postac(id_postaci));
+
+INSERT INTO przetwory (id_wykonawcy,zawartosc,id_konsumenta) VALUES ('1','bigos','3');
+```
 
 Kod umieszczany liniowo. Polecenie `SELECT` oznacza wybranie danych z bazy.
+
+# Tytuł
+## Poziom2
+###### Poziom 6
+
+Lista zadań do wykonania
+* todo 1
+* todo2
+  * ok
+ 
+1. Rozdział 1
+2. Rozdział 2
+
+**Listing 1**
+_listing 2_
