@@ -1,0 +1,19 @@
+def maxOdleglosc(dom, domy):
+    odleglosci = []
+    for el in domy:
+        if el != dom:
+            odleglosci.append(abs(dom-el))
+    return max(odleglosci)
+
+def ktoryDom(domy):
+    x = 0
+    maxOdleglosci = []
+    for el in domy:
+        maxOdleglosci.append(maxOdleglosc(el, domy))
+    x = maxOdleglosci.index(min(maxOdleglosci))
+    domek = domy[x]
+    return domek
+
+
+
+print(ktoryDom([1,2,5,7,12,13]))
